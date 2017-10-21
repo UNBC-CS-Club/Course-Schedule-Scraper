@@ -3,12 +3,22 @@
 
   "name": "UNBC Course Scraper",
   "description": "This extension will download an ical file from UNBC",
-  "version": "1.0",
+  "version": "0.1",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["scraper.js"]
+    }
+  ],
 
   "browser_action": {
    "default_icon": "icon.png",
    "default_popup": "popup.html"
   },
+
   "permissions": [
    "activeTab"
    ]
